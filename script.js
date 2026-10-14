@@ -6,6 +6,24 @@ const HIDDEN_REPOS = [GITHUB_USER, "portfolio"].map((n) => n.toLowerCase());
 // { title, description, tags: [...], link, linkLabel, repo }
 const FEATURED = [
   {
+    title: "Real Estate AI Concierge",
+    description:
+      "A fully automated booking system using GoHighLevel and Vapi.ai that screens leads and books appointments directly into the CRM calendar.",
+    tags: ["GHL", "AI Voice Agent", "Vapi.ai"],
+  },
+  {
+    title: "E-commerce Data Scraper",
+    description:
+      "Custom Python script that scrapes 10k+ products, cleans the data with Pandas and feeds insights into a Power BI dashboard.",
+    tags: ["Python", "Selenium", "Pandas", "Power BI"],
+  },
+  {
+    title: "Cross-Platform Sync Engine",
+    description:
+      "A Make.com scenario linking Shopify, Mailchimp and GoHighLevel for real-time inventory and customer data synchronization.",
+    tags: ["Make.com", "Webhooks", "Shopify", "Mailchimp"],
+  },
+  {
     title: "This Portfolio",
     description:
       "A fast, responsive personal site with light/dark themes, scroll animations and a live GitHub feed, built through AI-assisted development with Claude Code.",
@@ -105,10 +123,10 @@ function renderFeatured() {
       <h3>${escapeHtml(p.title)}</h3>
       <p>${escapeHtml(p.description)}</p>
       <ul class="tags">${p.tags.map((t) => `<li>${escapeHtml(t)}</li>`).join("")}</ul>
-      <div class="links">
-        ${p.link ? `<a href="${p.link}" target="_blank" rel="noopener">${escapeHtml(p.linkLabel || "View")} ↗</a>` : ""}
-        ${p.repo ? `<a href="${p.repo}" target="_blank" rel="noopener">Code ↗</a>` : ""}
-      </div>
+      ${p.link || p.repo ? `<div class="links">
+        ${p.link ? `<a class="btn-text" href="${p.link}" target="_blank" rel="noopener">${escapeHtml(p.linkLabel || "View")} <i class="fa-solid fa-arrow-right"></i></a>` : ""}
+        ${p.repo ? `<a class="btn-text" href="${p.repo}" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>` : ""}
+      </div>` : ""}
     </article>`
   ).join("");
 }
