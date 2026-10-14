@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammad Ali Qureshi | Portfolio</title>
+  <meta name="description" content="Portfolio of Muhammad Ali Qureshi: data science, tech and coding." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <a href="#top" class="logo">MAliQ<span>.</span></a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <button id="theme-toggle" aria-label="Toggle dark mode">◐</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <img src="https://avatars.githubusercontent.com/u/130571402?v=4" alt="Muhammad Ali Qureshi" class="avatar" />
+      <p class="mono">Hi, I'm</p>
+      <h1>Muhammad Ali Qureshi</h1>
+      <p class="tagline">Passionate about <span class="accent">data</span>. Exploring data science, tech and coding — currently learning C through CS50x.</p>
+      <div class="cta">
+        <a href="#projects" class="btn">See my work</a>
+        <a href="#contact" class="btn btn-outline">Get in touch</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2><span class="mono">01.</span> About me</h2>
+      <p>
+        I'm a curious learner who enjoys turning raw data into insight. I'm working
+        through Harvard's <strong>CS50x</strong> to build strong computer-science
+        foundations, and I'm always looking for people to collaborate with on
+        CS50 problem sets and side projects.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2><span class="mono">02.</span> Skills &amp; interests</h2>
+      <ul class="chips">
+        <li>Data Science</li>
+        <li>Python</li>
+        <li>C</li>
+        <li>SQL</li>
+        <li>Data Visualization</li>
+        <li>HTML &amp; CSS</li>
+        <li>Git &amp; GitHub</li>
+        <li>Problem Solving</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2><span class="mono">03.</span> Projects</h2>
+      <p class="muted">Pulled live from my GitHub — most recently updated first.</p>
+      <div id="repo-grid" class="grid">
+        <p class="muted">Loading projects…</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2><span class="mono">04.</span> Contact</h2>
+      <p>Want to collaborate, talk data, or pair on CS50? Reach out!</p>
+      <div class="cta">
+        <a class="btn" href="mailto:Mohammadaliqureshi2611@gmail.com">Email me</a>
+        <a class="btn btn-outline" href="https://github.com/MAliQ-pak" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-outline" href="https://twitter.com/AliGorithmicc" target="_blank" rel="noopener">Twitter / X</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Muhammad Ali Qureshi · Built with HTML, CSS &amp; JS · Hosted on GitHub Pages</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
