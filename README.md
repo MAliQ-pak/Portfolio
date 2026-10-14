@@ -22,15 +22,15 @@ Live at **https://maliq-pak.github.io/portfolio/**.
 | Repos hidden from the GitHub grid | `HIDDEN_REPOS` in `script.js` |
 | Colors | CSS variables at the top of `style.css` |
 
-**Images:** put these in an `assets/` folder and they appear automatically (fallbacks show until then):
+**Images** (in `assets/`): the page uses web-sized copies; the originals are kept alongside.
 
-| File | Used for |
-| --- | --- |
-| `assets/logo.png` | Navbar logo (replaces the text logo) |
-| `assets/profile.png` | Hero photo (replaces the GitHub avatar) |
-| `assets/ghl-badge.png` | GHL Certified Admin card |
-| `assets/achiever_receiving.png` | Achiever Award card |
-| `assets/rockstar.png` | Rockstar Employee 2025 card |
+| Page uses | Made from | Shown in |
+| --- | --- | --- |
+| `logo-mark.png` | `logo.png` (monogram cropped) | Navbar |
+| `profile-400.jpg` | `profile.png` | Hero photo and social preview |
+| `ghl-badge.png` | n/a | GHL Certified Admin card |
+| `achiever-640.jpg` | `achiever_receiving.png` | Achiever Award card |
+| `rockstar-640.jpg` | `rockstar.png` | Rockstar Employee 2025 card |
 
 **Download CV button:** add a file named `resume.pdf` to the repo root. The button appears automatically once that file exists.
 
