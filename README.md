@@ -1,13 +1,28 @@
 # Portfolio
 
-My personal portfolio website — live at **https://maliq-pak.github.io/portfolio/**.
+Personal portfolio of **Muhammad Ali Qureshi**, CRM, AI Automation & Software Solutions Specialist.
+Live at **https://maliq-pak.github.io/portfolio/**.
 
 ## Features
 
-- Responsive single-page layout (About, Skills, Projects, Contact)
-- Light / dark theme toggle (remembers your choice)
-- Projects section loads my public repositories live from the GitHub API
-- Plain HTML, CSS and JavaScript — no build step
+- Animated hero with rotating "I build…" roles, scroll-reveal sections and a scrolling toolkit marquee
+- Sections: About, What I build, Featured projects, Experience timeline, Toolkit, Contact
+- Light / dark theme (follows your OS, remembers your choice)
+- "More on GitHub" grid loads public repositories live from the GitHub API
+- SEO and social previews: Open Graph / Twitter tags and schema.org `Person` data
+- Respects `prefers-reduced-motion`; plain HTML, CSS and JavaScript with no build step
+
+## Customize
+
+| What | Where |
+| --- | --- |
+| Bio, services, experience, toolkit, contact links | `index.html` |
+| Hand-picked featured projects | `FEATURED` array in `script.js` |
+| Rotating hero phrases | `ROLES` array in `script.js` |
+| Repos hidden from the GitHub grid | `HIDDEN_REPOS` in `script.js` |
+| Colors | CSS variables at the top of `style.css` |
+
+**Download CV button:** add a file named `resume.pdf` to the repo root. The button appears automatically once that file exists.
 
 ## Run locally
 
@@ -18,12 +33,4 @@ python3 -m http.server 8000
 
 ## Deploy
 
-1. Go to **Settings → Pages** in this repository.
-2. Under **Build and deployment**, choose **Deploy from a branch**, branch `main`, folder `/ (root)`.
-3. Save — the site will be live at https://maliq-pak.github.io/portfolio/ within a minute or two.
-
-## Customize
-
-- Edit text, skills and links in `index.html`
-- Change colors in the `:root` variables at the top of `style.css`
-- Hide repos from the projects grid via `HIDDEN_REPOS` in `script.js`
+Settings → Pages → **Deploy from a branch** → `main` / `(root)`.

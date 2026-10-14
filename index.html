@@ -3,82 +3,231 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Muhammad Ali Qureshi | Portfolio</title>
-  <meta name="description" content="Portfolio of Muhammad Ali Qureshi: data science, tech and coding." />
+  <title>Muhammad Ali Qureshi | CRM, AI Automation &amp; Software Solutions</title>
+  <meta name="description" content="Muhammad Ali Qureshi builds AI voice agents, CRM automations, API integrations and AI-powered web apps that solve real business problems." />
+  <meta name="author" content="Muhammad Ali Qureshi" />
+  <meta name="theme-color" content="#0b0f1a" />
+  <link rel="canonical" href="https://maliq-pak.github.io/portfolio/" />
+
+  <!-- Social previews (LinkedIn, X, WhatsApp, Slack…) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://maliq-pak.github.io/portfolio/" />
+  <meta property="og:title" content="Muhammad Ali Qureshi | CRM, AI Automation & Software Solutions" />
+  <meta property="og:description" content="AI voice agents, CRM automation, API integrations and AI-built web apps that solve real business problems." />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/130571402?v=4" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@AliGorithmicc" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Muhammad Ali Qureshi",
+    "jobTitle": "CRM, AI Automation & Software Solutions Specialist",
+    "worksFor": { "@type": "Organization", "name": "The Plum Tree Group" },
+    "url": "https://maliq-pak.github.io/portfolio/",
+    "image": "https://avatars.githubusercontent.com/u/130571402?v=4",
+    "sameAs": [
+      "https://www.linkedin.com/in/automatali/",
+      "https://github.com/MAliQ-pak",
+      "https://twitter.com/AliGorithmicc"
+    ],
+    "knowsAbout": ["GoHighLevel", "n8n", "AI voice agents", "Conversational AI", "Workflow automation", "CRM integrations", "APIs", "Webhooks", "Make.com", "Zapier", "Google Apps Script", "Claude Code"]
+  }
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%237c5cff'/><text x='50' y='68' font-size='52' font-family='Arial' font-weight='bold' text-anchor='middle' fill='white'>A</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script>
+    // Set theme before paint to avoid a flash
+    (function () {
+      document.documentElement.classList.add("js");
+      var t = null;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      document.documentElement.dataset.theme = t || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+    })();
+  </script>
 </head>
 <body>
+  <div class="bg-glow" aria-hidden="true"></div>
+
   <header class="nav">
     <a href="#top" class="logo">MAliQ<span>.</span></a>
     <nav>
       <a href="#about">About</a>
-      <a href="#skills">Skills</a>
+      <a href="#services">What I build</a>
       <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
-      <button id="theme-toggle" aria-label="Toggle dark mode">◐</button>
+      <button id="theme-toggle" aria-label="Toggle light/dark theme">◐</button>
     </nav>
   </header>
 
   <main id="top">
+    <!-- Hero -->
     <section class="hero">
-      <img src="https://avatars.githubusercontent.com/u/130571402?v=4" alt="Muhammad Ali Qureshi" class="avatar" />
-      <p class="mono">Hi, I'm</p>
-      <h1>Muhammad Ali Qureshi</h1>
-      <p class="tagline">Passionate about <span class="accent">data</span>. Exploring data science, tech and coding — currently learning C through CS50x.</p>
-      <div class="cta">
-        <a href="#projects" class="btn">See my work</a>
-        <a href="#contact" class="btn btn-outline">Get in touch</a>
+      <div class="hero-text">
+        <span class="pill"><span class="dot"></span> CRM, AI Automation &amp; Software Solutions Specialist · The Plum Tree Group</span>
+        <h1>Hi, I'm <span class="gradient">Muhammad Ali Qureshi</span>.</h1>
+        <p class="lead">
+          I build <span id="typed" class="typed">AI voice agents</span><span class="caret" aria-hidden="true">|</span><br />
+          that solve real-world business problems.
+        </p>
+        <div class="cta">
+          <a href="#services" class="btn">See what I build</a>
+          <a href="resume.pdf" id="cv-btn" class="btn btn-ghost" download hidden>Download CV ↓</a>
+          <a href="#contact" class="btn btn-ghost">Let's talk</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="https://avatars.githubusercontent.com/u/130571402?v=4" alt="Portrait of Muhammad Ali Qureshi" width="260" height="260" />
       </div>
     </section>
 
-    <section id="about">
-      <h2><span class="mono">01.</span> About me</h2>
-      <p>
-        I'm a curious learner who enjoys turning raw data into insight. I'm working
-        through Harvard's <strong>CS50x</strong> to build strong computer-science
-        foundations, and I'm always looking for people to collaborate with on
-        CS50 problem sets and side projects.
-      </p>
+    <!-- Toolkit marquee -->
+    <div class="marquee" aria-label="Toolkit">
+      <div class="marquee-track">
+        <span>GoHighLevel</span><span>n8n</span><span>Claude Code</span><span>Make.com</span><span>Zapier</span><span>Google Apps Script</span><span>AI Voice Agents</span><span>REST APIs</span><span>Webhooks</span><span>Conversational AI</span>
+        <span aria-hidden="true">GoHighLevel</span><span aria-hidden="true">n8n</span><span aria-hidden="true">Claude Code</span><span aria-hidden="true">Make.com</span><span aria-hidden="true">Zapier</span><span aria-hidden="true">Google Apps Script</span><span aria-hidden="true">AI Voice Agents</span><span aria-hidden="true">REST APIs</span><span aria-hidden="true">Webhooks</span><span aria-hidden="true">Conversational AI</span>
+      </div>
+    </div>
+
+    <!-- About -->
+    <section id="about" class="reveal">
+      <h2><span class="num">01</span> About me</h2>
+      <div class="about-grid">
+        <div>
+          <p>
+            I'm a <strong>CRM, AI Automation and Software Solutions Specialist</strong> at
+            <strong>The Plum Tree Group</strong>, passionate about building intelligent systems,
+            custom web applications and integrations that solve real-world business problems.
+          </p>
+          <p>
+            My work spans GoHighLevel, AI voice agents, conversational AI, workflow automation,
+            CRM integrations, APIs, webhooks and business process optimization. I also build
+            interactive web apps and practical software tools with AI-assisted development and
+            vibe coding in <strong>Claude Code</strong> and other modern platforms, turning ideas
+            into working applications faster.
+          </p>
+          <p>
+            With a background in Computer Science and experience in data analytics, lead generation
+            and client onboarding, I pair technical creativity with a <strong>business-first mindset</strong>.
+            I work across the whole process, from understanding a problem and designing the
+            solution to building it and refining it.
+          </p>
+        </div>
+        <ul class="principles">
+          <li><span>01</span><div><strong>Understand</strong><p>Start from the business problem, not the tool.</p></div></li>
+          <li><span>02</span><div><strong>Design</strong><p>Map the workflow, data and integrations end to end.</p></div></li>
+          <li><span>03</span><div><strong>Build</strong><p>Automate, integrate and ship with AI-assisted speed.</p></div></li>
+          <li><span>04</span><div><strong>Refine</strong><p>Measure, iterate and make it scale.</p></div></li>
+        </ul>
+      </div>
     </section>
 
-    <section id="skills">
-      <h2><span class="mono">02.</span> Skills &amp; interests</h2>
-      <ul class="chips">
-        <li>Data Science</li>
-        <li>Python</li>
-        <li>C</li>
-        <li>SQL</li>
-        <li>Data Visualization</li>
-        <li>HTML &amp; CSS</li>
-        <li>Git &amp; GitHub</li>
-        <li>Problem Solving</li>
-      </ul>
+    <!-- Services -->
+    <section id="services" class="reveal">
+      <h2><span class="num">02</span> What I build</h2>
+      <div class="grid services">
+        <article class="card">
+          <div class="icon">🎙️</div>
+          <h3>AI Voice Agents &amp; Conversational AI</h3>
+          <p>Voice and chat agents that answer, qualify, book and follow up, wired straight into your CRM.</p>
+          <ul class="tags"><li>AI agents</li><li>Conversational AI</li></ul>
+        </article>
+        <article class="card">
+          <div class="icon">📇</div>
+          <h3>CRM Automation</h3>
+          <p>GoHighLevel pipelines, workflows and onboarding journeys that keep every lead moving.</p>
+          <ul class="tags"><li>GoHighLevel</li><li>CRM</li></ul>
+        </article>
+        <article class="card">
+          <div class="icon">⚙️</div>
+          <h3>Workflow Automation</h3>
+          <p>Multi-step automations that remove repetitive work across tools and teams.</p>
+          <ul class="tags"><li>n8n</li><li>Make.com</li><li>Zapier</li></ul>
+        </article>
+        <article class="card">
+          <div class="icon">🔌</div>
+          <h3>APIs, Webhooks &amp; Integrations</h3>
+          <p>Custom connections between platforms that don't talk to each other out of the box.</p>
+          <ul class="tags"><li>REST APIs</li><li>Webhooks</li><li>Apps Script</li></ul>
+        </article>
+        <article class="card">
+          <div class="icon">🧩</div>
+          <h3>AI-Built Web Apps</h3>
+          <p>Interactive web applications and internal tools, built quickly with Claude Code and AI-assisted development.</p>
+          <ul class="tags"><li>Claude Code</li><li>Web apps</li></ul>
+        </article>
+        <article class="card">
+          <div class="icon">📈</div>
+          <h3>Process Optimization</h3>
+          <p>Turning messy, manual business processes into clear, measurable and scalable systems.</p>
+          <ul class="tags"><li>Data analytics</li><li>Ops</li></ul>
+        </article>
+      </div>
     </section>
 
-    <section id="projects">
-      <h2><span class="mono">03.</span> Projects</h2>
-      <p class="muted">Pulled live from my GitHub — most recently updated first.</p>
+    <!-- Projects -->
+    <section id="projects" class="reveal">
+      <h2><span class="num">03</span> Featured projects</h2>
+      <div id="featured-grid" class="grid"></div>
+      <h3 class="subhead">More on GitHub</h3>
       <div id="repo-grid" class="grid">
-        <p class="muted">Loading projects…</p>
+        <p class="muted">Loading repositories…</p>
       </div>
     </section>
 
-    <section id="contact">
-      <h2><span class="mono">04.</span> Contact</h2>
-      <p>Want to collaborate, talk data, or pair on CS50? Reach out!</p>
-      <div class="cta">
+    <!-- Experience -->
+    <section id="experience" class="reveal">
+      <h2><span class="num">04</span> Experience</h2>
+      <ol class="timeline">
+        <li>
+          <span class="when">Now</span>
+          <h3>CRM, AI Automation &amp; Software Solutions Specialist</h3>
+          <p class="where">The Plum Tree Group</p>
+          <p>Designing AI voice agents, GoHighLevel automations, CRM integrations and custom software that streamline how the business runs.</p>
+        </li>
+        <li>
+          <span class="when">Earlier</span>
+          <h3>Data Analytics, Lead Generation &amp; Client Onboarding</h3>
+          <p>Analyzed data, generated and qualified leads, and onboarded clients, which built the business-first lens I bring to every automation.</p>
+        </li>
+        <li>
+          <span class="when">Foundation</span>
+          <h3>Computer Science</h3>
+          <p>Background in Computer Science, including Harvard's CS50x, the base for my work in software, data and AI.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Toolkit -->
+    <section id="toolkit" class="reveal">
+      <h2><span class="num">05</span> Toolkit</h2>
+      <div class="toolkit">
+        <div><h3>Automation &amp; CRM</h3><ul class="chips"><li>GoHighLevel</li><li>n8n</li><li>Make.com</li><li>Zapier</li><li>Google Apps Script</li><li>CRM automation</li></ul></div>
+        <div><h3>AI</h3><ul class="chips"><li>AI voice agents</li><li>Conversational AI</li><li>AI agents</li><li>Claude Code</li><li>Vibe coding</li></ul></div>
+        <div><h3>Integration &amp; Web</h3><ul class="chips"><li>Custom APIs</li><li>Webhooks</li><li>CRM integrations</li><li>Web app development</li><li>Business process automation</li></ul></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="reveal contact">
+      <h2>Have a process that should run itself?</h2>
+      <p>Let's design the automation, integration or AI agent that gets it done.</p>
+      <div class="cta center">
         <a class="btn" href="mailto:Mohammadaliqureshi2611@gmail.com">Email me</a>
-        <a class="btn btn-outline" href="https://github.com/MAliQ-pak" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn btn-outline" href="https://twitter.com/AliGorithmicc" target="_blank" rel="noopener">Twitter / X</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/automatali/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-ghost" href="https://github.com/MAliQ-pak" target="_blank" rel="noopener">GitHub</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© <span id="year"></span> Muhammad Ali Qureshi · Built with HTML, CSS &amp; JS · Hosted on GitHub Pages</p>
+    <p>© <span id="year"></span> Muhammad Ali Qureshi · Built with Claude Code · Hosted on GitHub Pages</p>
   </footer>
 
   <script src="script.js"></script>
