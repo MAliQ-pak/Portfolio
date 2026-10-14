@@ -6,15 +6,18 @@
   <title>Muhammad Ali Qureshi | CRM, AI Automation &amp; Software Solutions</title>
   <meta name="description" content="Muhammad Ali Qureshi is a GHL Certified Admin who builds AI voice agents, CRM automations, API integrations and AI-powered web apps that solve real business problems." />
   <meta name="author" content="Muhammad Ali Qureshi" />
-  <meta name="theme-color" content="#2563eb" />
+  <meta name="theme-color" content="#070a12" />
   <link rel="canonical" href="https://maliq-pak.github.io/portfolio/" />
+  <link rel="icon" type="image/svg+xml" href="assets/avatar.svg" />
+  <link rel="icon" type="image/png" href="assets/avatar-512.png" />
+  <link rel="apple-touch-icon" href="assets/avatar-512.png" />
 
   <!-- Social previews (LinkedIn, X, WhatsApp, Slack…) -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://maliq-pak.github.io/portfolio/" />
   <meta property="og:title" content="Muhammad Ali Qureshi | CRM, AI Automation & Software Solutions" />
   <meta property="og:description" content="GHL Certified Admin building AI voice agents, CRM automation, API integrations and AI-built web apps." />
-  <meta property="og:image" content="https://maliq-pak.github.io/portfolio/assets/profile-400.jpg" />
+  <meta property="og:image" content="https://maliq-pak.github.io/portfolio/assets/avatar-512.png" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@AliGorithmicc" />
 
@@ -37,271 +40,276 @@
   }
   </script>
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%232563eb'/><text x='50' y='68' font-size='46' font-family='Arial' font-weight='bold' text-anchor='middle' fill='white'>AQ</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <script>
-    // Set theme before paint to avoid a flash
-    (function () {
-      document.documentElement.classList.add("js");
-      var t = null;
-      try { t = localStorage.getItem("theme"); } catch (e) {}
-      document.documentElement.dataset.theme = t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-    })();
+
+  <!-- Three.js is bundled in /vendor so the 3D scene never depends on a CDN -->
+  <script type="importmap">
+    { "imports": { "three": "./vendor/three/three.module.min.js" } }
   </script>
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
+  <div class="progress" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
   <header class="nav">
-    <a href="#top" class="logo" aria-label="Home">
-      <!-- assets/logo-mark.png is used when it exists; otherwise the text logo shows -->
-      <img src="assets/logo-mark.png" alt="MAQ" onload="this.nextElementSibling.remove()" onerror="this.remove()" />
-      <span class="logo-text">MAQ<span>.</span></span>
+    <a href="#top" class="brand" aria-label="Back to top">
+      <span class="avatar-slot brand-avatar" data-avatar><img src="assets/avatar.svg" alt="" width="38" height="38" /></span>
+      <span class="brand-text">MAQ<span class="blink">_</span></span>
     </a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">What I build</a>
-      <a href="#projects">Projects</a>
-      <a href="#honors">Honors</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact" class="nav-cta">Contact</a>
-      <button id="theme-toggle" aria-label="Toggle light/dark theme"><i class="fa-solid fa-circle-half-stroke"></i></button>
+    <nav class="nav-links">
+      <a href="#about">./about</a>
+      <a href="#services">./build</a>
+      <a href="#projects">./projects</a>
+      <a href="#skills">./skills</a>
+      <a href="#experience">./experience</a>
+      <a href="#contact">./contact</a>
     </nav>
+    <button class="term-btn" data-open-terminal aria-label="Open terminal"><span>&gt;_</span> terminal</button>
   </header>
 
   <main id="top">
-    <!-- Hero -->
+    <!-- ============ HERO ============ -->
     <section class="hero">
-      <div class="hero-inner">
-        <div class="profile-ring">
-          <!-- assets/profile-400.jpg is used when it exists; otherwise the GitHub avatar -->
-          <img src="assets/profile-400.jpg" alt="Muhammad Ali Qureshi" width="150" height="150"
-               onerror="this.onerror=null;this.src='https://avatars.githubusercontent.com/u/130571402?v=4'" />
-        </div>
-        <p class="eyebrow">Hi, I'm Muhammad Ali Qureshi</p>
-        <h1>CRM &amp; AI Automation <span class="accent-text">Specialist</span></h1>
-        <p class="lead">
-          I build <span id="typed" class="typed">AI voice agents</span><span class="caret" aria-hidden="true">|</span><br />
-          that solve real-world business problems.
+      <div class="hero-copy">
+        <p class="comment">// hello, world 👋</p>
+        <h1 class="glitch" data-text="Muhammad Ali Qureshi">Muhammad Ali Qureshi</h1>
+        <p class="role mono">
+          <span class="prompt">&gt;</span> building <span id="typed" class="typed">AI voice agents</span><span class="caret">▋</span>
         </p>
-        <div class="cta center">
-          <a href="#projects" class="btn btn-primary">See my work</a>
-          <a href="resume.pdf" id="cv-btn" class="btn btn-secondary" download hidden><i class="fa-solid fa-download"></i> Download CV</a>
-          <a href="#contact" class="btn btn-secondary">Let's connect</a>
+
+        <div class="window code-window">
+          <div class="window-bar"><i></i><i></i><i></i><span>ali.ts</span></div>
+<pre class="code"><code><span class="kw">const</span> <span class="var">ali</span> = {
+  <span class="prop">role</span>: <span class="str">"CRM, AI Automation &amp; Software Solutions Specialist"</span>,
+  <span class="prop">company</span>: <span class="str">"The Plum Tree Group"</span>,
+  <span class="prop">certified</span>: <span class="str">"GHL Certified Admin"</span>,
+  <span class="prop">stack</span>: [<span class="str">"GoHighLevel"</span>, <span class="str">"n8n"</span>, <span class="str">"Claude Code"</span>, <span class="str">"APIs"</span>],
+  <span class="prop">mindset</span>: <span class="str">"business-first"</span>,
+  <span class="prop">openTo</span>: <span class="str">"automation &amp; AI projects"</span>,
+};</code></pre>
         </div>
 
-        <div class="stats">
-          <div class="stat"><span class="stat-number">GHL</span><span class="stat-label">Certified Admin</span></div>
-          <div class="stat-divider"></div>
-          <div class="stat"><span class="stat-number">AI</span><span class="stat-label">Voice Agents</span></div>
-          <div class="stat-divider"></div>
-          <div class="stat"><span class="stat-number">API</span><span class="stat-label">Integrations</span></div>
-          <div class="stat-divider"></div>
-          <div class="stat"><span class="stat-number">Data</span><span class="stat-label">Analytics</span></div>
+        <div class="cta">
+          <a href="#projects" class="btn btn-primary"><span class="mono">$</span> git checkout projects</a>
+          <a href="#contact" class="btn btn-ghost"><span class="mono">$</span> npm run contact</a>
+          <a href="resume.pdf" id="cv-btn" class="btn btn-ghost" download hidden><span class="mono">$</span> wget cv.pdf</a>
         </div>
+      </div>
+
+      <div class="hero-3d" id="hero-3d">
+        <!-- 2D fallback, replaced by the 3D scene when WebGL is available -->
+        <div class="hero-fallback avatar-slot" data-avatar><img src="assets/avatar.svg" alt="Avatar of Muhammad Ali Qureshi" /></div>
+        <div class="bubble" id="bubble" role="status" aria-live="polite"></div>
+        <div class="node-tip" id="node-tip" hidden></div>
+        <p class="hint mono">drag to rotate · click me · hover the nodes</p>
       </div>
     </section>
 
-    <!-- Toolkit marquee -->
-    <div class="marquee" aria-label="Toolkit">
-      <div class="marquee-track">
-        <span>GoHighLevel</span><span>n8n</span><span>Claude Code</span><span>Make.com</span><span>Zapier</span><span>Vapi.ai</span><span>Google Apps Script</span><span>Python</span><span>Power BI</span><span>REST APIs</span><span>Webhooks</span><span>Mailchimp</span>
-        <span aria-hidden="true">GoHighLevel</span><span aria-hidden="true">n8n</span><span aria-hidden="true">Claude Code</span><span aria-hidden="true">Make.com</span><span aria-hidden="true">Zapier</span><span aria-hidden="true">Vapi.ai</span><span aria-hidden="true">Google Apps Script</span><span aria-hidden="true">Python</span><span aria-hidden="true">Power BI</span><span aria-hidden="true">REST APIs</span><span aria-hidden="true">Webhooks</span><span aria-hidden="true">Mailchimp</span>
-      </div>
+    <div class="statusbar mono" aria-hidden="true">
+      <span class="sb-accent">⎇ main</span>
+      <span>✓ GHL Certified Admin</span>
+      <span class="hide-sm">◉ AI Voice Agents</span>
+      <span class="hide-sm">⇄ APIs &amp; Webhooks</span>
+      <span class="sb-right">press <kbd>`</kbd> for terminal</span>
+      <span class="hide-sm">UTF-8</span>
+      <span class="hide-sm">✦ open to collaborate</span>
     </div>
 
     <div class="container">
-      <!-- About -->
+      <!-- ============ ABOUT ============ -->
       <section id="about" class="section reveal">
-        <h2 class="section-title">About me</h2>
-        <p class="section-subtitle">Streamlining business with technology</p>
+        <p class="kicker">// 01 · about</p>
+        <h2>About me</h2>
         <div class="about-grid">
-          <div class="about-text">
-            <p>
-              I'm a <strong>CRM, AI Automation and Software Solutions Specialist</strong> at
-              <strong>The Plum Tree Group</strong>, passionate about building intelligent systems,
-              custom web applications and integrations that solve real-world business problems.
-            </p>
-            <p>
-              My work spans GoHighLevel, AI voice agents, conversational AI, workflow automation,
-              CRM integrations, APIs, webhooks and business process optimization. I also build
-              interactive web apps and practical software tools with AI-assisted development and
-              vibe coding in <strong>Claude Code</strong> and other modern platforms, turning ideas
-              into working applications faster.
-            </p>
-            <p>
-              With a background in Computer Science and experience in data analytics, lead generation
-              and client onboarding, I pair technical creativity with a <strong>business-first mindset</strong>.
-              My goal is to let technology do the heavy lifting so teams can focus on growth.
-            </p>
-          </div>
-          <ul class="principles">
-            <li><span>01</span><div><strong>Understand</strong><p>Start from the business problem, not the tool.</p></div></li>
-            <li><span>02</span><div><strong>Design</strong><p>Map the workflow, data and integrations end to end.</p></div></li>
-            <li><span>03</span><div><strong>Build</strong><p>Automate, integrate and ship with AI-assisted speed.</p></div></li>
-            <li><span>04</span><div><strong>Refine</strong><p>Measure, iterate and make it scale.</p></div></li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Services -->
-      <section id="services" class="section reveal">
-        <h2 class="section-title">What I build</h2>
-        <div class="grid">
-          <article class="card">
-            <div class="icon"><i class="fa-solid fa-headset"></i></div>
-            <h3>AI Voice Agents &amp; Chatbots</h3>
-            <p>Voice and chat agents that answer, qualify, book and follow up, wired straight into the CRM.</p>
-            <ul class="tags"><li>GHL AI</li><li>Vapi.ai</li><li>Conversational AI</li></ul>
-          </article>
-          <article class="card">
-            <div class="icon"><i class="fa-solid fa-address-book"></i></div>
-            <h3>CRM Automation</h3>
-            <p>GoHighLevel pipelines, workflows and onboarding journeys that keep every lead moving.</p>
-            <ul class="tags"><li>GoHighLevel</li><li>Pipelines</li><li>Mailchimp</li></ul>
-          </article>
-          <article class="card">
-            <div class="icon"><i class="fa-solid fa-gears"></i></div>
-            <h3>Workflow Automation</h3>
-            <p>Multi-step automations that remove repetitive work across tools and teams.</p>
-            <ul class="tags"><li>n8n</li><li>Make.com</li><li>Zapier</li></ul>
-          </article>
-          <article class="card">
-            <div class="icon"><i class="fa-solid fa-plug"></i></div>
-            <h3>APIs, Webhooks &amp; Integrations</h3>
-            <p>Custom connections between platforms that don't talk to each other out of the box.</p>
-            <ul class="tags"><li>REST APIs</li><li>Webhooks</li><li>Apps Script</li></ul>
-          </article>
-          <article class="card">
-            <div class="icon"><i class="fa-solid fa-laptop-code"></i></div>
-            <h3>AI-Built Web Apps</h3>
-            <p>Interactive web applications and internal tools, built quickly with Claude Code and AI-assisted development.</p>
-            <ul class="tags"><li>Claude Code</li><li>Web apps</li></ul>
-          </article>
-          <article class="card">
-            <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
-            <h3>Data &amp; Dashboards</h3>
-            <p>Scraping, cleaning and modeling data, then turning it into dashboards people actually use.</p>
-            <ul class="tags"><li>Python</li><li>Pandas</li><li>Power BI</li></ul>
-          </article>
-        </div>
-      </section>
-
-      <!-- Projects -->
-      <section id="projects" class="section reveal">
-        <h2 class="section-title">Featured automation</h2>
-        <div id="featured-grid" class="grid"></div>
-        <h3 class="subhead">More on GitHub</h3>
-        <div id="repo-grid" class="grid">
-          <p class="muted">Loading repositories…</p>
-        </div>
-      </section>
-
-      <!-- Certifications & Honors -->
-      <section id="honors" class="section reveal">
-        <h2 class="section-title">Certifications &amp; honors</h2>
-        <div class="grid honors">
-          <article class="card honor">
-            <div class="honor-media badge">
-              <i class="fa-solid fa-certificate"></i>
-              <img src="assets/ghl-badge.png" alt="GoHighLevel Certified Admin badge" onerror="this.remove()" />
+          <div class="window">
+            <div class="window-bar"><i></i><i></i><i></i><span>about.md</span></div>
+            <div class="window-body prose">
+              <p><span class="md"># </span>I'm a <strong>CRM, AI Automation and Software Solutions Specialist</strong> at <strong>The Plum Tree Group</strong>, passionate about building intelligent systems, custom web applications and integrations that solve real-world business problems.</p>
+              <p>My work spans GoHighLevel, AI voice agents, conversational AI, workflow automation, CRM integrations, APIs, webhooks and business process optimization. I also build interactive web apps and practical tools with AI-assisted development and vibe coding in <strong>Claude Code</strong>, turning ideas into working applications faster.</p>
+              <p>With a background in Computer Science and experience in data analytics, lead generation and client onboarding, I pair technical creativity with a <strong>business-first mindset</strong>, and let technology do the heavy lifting so teams can focus on growth.</p>
             </div>
+          </div>
+          <div class="about-side">
+            <div class="avatar-card tilt">
+              <div class="avatar-slot avatar-big" data-avatar><img src="assets/avatar.svg" alt="Avatar of Muhammad Ali Qureshi" /></div>
+              <p class="mono small">ali.status = <span class="str">"automating things"</span></p>
+            </div>
+            <ol class="pipeline mono">
+              <li><span>01</span> understand<em>() the problem</em></li>
+              <li><span>02</span> design<em>() the workflow</em></li>
+              <li><span>03</span> build<em>() with AI speed</em></li>
+              <li><span>04</span> refine<em>() until it scales</em></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SERVICES ============ -->
+      <section id="services" class="section reveal">
+        <p class="kicker">// 02 · services</p>
+        <h2>What I build</h2>
+        <div class="grid">
+          <article class="card tilt"><span class="token">voice.ai</span><h3>AI Voice Agents &amp; Chatbots</h3><p>Voice and chat agents that answer, qualify, book and follow up, wired straight into the CRM.</p><ul class="tags"><li>GHL AI</li><li>Vapi.ai</li><li>Conversational AI</li></ul></article>
+          <article class="card tilt"><span class="token">crm()</span><h3>CRM Automation</h3><p>GoHighLevel pipelines, workflows and onboarding journeys that keep every lead moving.</p><ul class="tags"><li>GoHighLevel</li><li>Pipelines</li><li>Mailchimp</li></ul></article>
+          <article class="card tilt"><span class="token">flow →</span><h3>Workflow Automation</h3><p>Multi-step automations that remove repetitive work across tools and teams.</p><ul class="tags"><li>n8n</li><li>Make.com</li><li>Zapier</li></ul></article>
+          <article class="card tilt"><span class="token">/api</span><h3>APIs, Webhooks &amp; Integrations</h3><p>Custom connections between platforms that don't talk to each other out of the box.</p><ul class="tags"><li>REST APIs</li><li>Webhooks</li><li>Apps Script</li></ul></article>
+          <article class="card tilt"><span class="token">&lt;App /&gt;</span><h3>AI-Built Web Apps</h3><p>Interactive web applications and internal tools, built quickly with Claude Code and AI-assisted development.</p><ul class="tags"><li>Claude Code</li><li>JavaScript</li><li>Web apps</li></ul></article>
+          <article class="card tilt"><span class="token">df.plot()</span><h3>Data &amp; Dashboards</h3><p>Scraping, cleaning and modeling data, then turning it into dashboards people actually use.</p><ul class="tags"><li>Python</li><li>Pandas</li><li>Power BI</li></ul></article>
+        </div>
+      </section>
+
+      <!-- ============ PROJECTS ============ -->
+      <section id="projects" class="section reveal">
+        <p class="kicker">// 03 · projects</p>
+        <h2>Featured automation</h2>
+        <div id="featured-grid" class="grid"></div>
+
+        <div class="window repo-window">
+          <div class="window-bar"><i></i><i></i><i></i><span>~/github/MAliQ-pak</span></div>
+          <div class="window-body mono">
+            <p class="cmd"><span class="prompt">$</span> ls -la --sort=updated</p>
+            <div id="repo-list" class="repo-list"><p class="muted">loading repositories…</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SKILLS ============ -->
+      <section id="skills" class="section reveal">
+        <p class="kicker">// 04 · skills</p>
+        <h2>Toolkit</h2>
+        <div class="window">
+          <div class="window-bar"><i></i><i></i><i></i><span>skills.json</span></div>
+<pre class="code json"><code>{
+  <span class="prop">"automation_crm"</span>: [<span class="str">"GoHighLevel"</span>, <span class="str">"GHL workflows"</span>, <span class="str">"n8n"</span>, <span class="str">"Make.com"</span>, <span class="str">"Zapier"</span>, <span class="str">"Mailchimp"</span>, <span class="str">"Google Apps Script"</span>],
+  <span class="prop">"ai_dev"</span>: [<span class="str">"AI voice agents"</span>, <span class="str">"Conversational AI"</span>, <span class="str">"Vapi.ai"</span>, <span class="str">"Claude Code"</span>, <span class="str">"Vibe coding"</span>],
+  <span class="prop">"integration"</span>: [<span class="str">"Custom APIs"</span>, <span class="str">"Webhooks"</span>, <span class="str">"CRM integrations"</span>, <span class="str">"Business process automation"</span>],
+  <span class="prop">"data"</span>: [<span class="str">"Python"</span>, <span class="str">"Pandas"</span>, <span class="str">"BeautifulSoup"</span>, <span class="str">"Selenium"</span>, <span class="str">"Jupyter"</span>, <span class="str">"Power BI"</span>, <span class="str">"Advanced Excel"</span>],
+  <span class="prop">"certified"</span>: <span class="kw">true</span>,
+  <span class="prop">"learning"</span>: <span class="str">"always"</span>
+}</code></pre>
+        </div>
+      </section>
+
+      <!-- ============ HONORS ============ -->
+      <section id="honors" class="section reveal">
+        <p class="kicker">// 05 · honors</p>
+        <h2>Certifications &amp; honors</h2>
+        <div class="grid">
+          <article class="card honor tilt">
+            <div class="honor-media badge"><img src="assets/ghl-badge.png" alt="GoHighLevel Certified Admin badge" onerror="this.remove()" /></div>
             <h3>GHL Certified Admin</h3>
             <p>Official GoHighLevel certification.</p>
-            <a href="https://directory.gohighlevel.com/" target="_blank" rel="noopener" class="btn-text">Verify credential <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="https://directory.gohighlevel.com/" target="_blank" rel="noopener" class="link mono">verify --credential →</a>
           </article>
-          <article class="card honor">
-            <div class="honor-media">
-              <i class="fa-solid fa-trophy"></i>
-              <img src="assets/achiever-640.jpg" alt="Receiving the Achiever Award" onerror="this.remove()" />
-            </div>
+          <article class="card honor tilt">
+            <div class="honor-media"><img src="assets/achiever-640.jpg" alt="Receiving the Achiever Award" onerror="this.remove()" /></div>
             <h3>Achiever Award</h3>
-            <p class="honor-date">July 2025</p>
+            <p class="date mono">2025-07</p>
             <p>Awarded at The Plum Tree Group for consistent exceptional performance and dedication.</p>
-            <a href="https://www.linkedin.com/posts/the-plumtree-group-global_certificate-distribution-activity-7356798566733856768-Aokb" target="_blank" rel="noopener" class="btn-text">View post <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="https://www.linkedin.com/posts/the-plumtree-group-global_certificate-distribution-activity-7356798566733856768-Aokb" target="_blank" rel="noopener" class="link mono">open post →</a>
           </article>
-          <article class="card honor">
-            <div class="honor-media">
-              <i class="fa-solid fa-star"></i>
-              <img src="assets/rockstar-640.jpg" alt="Rockstar Employee 2025" onerror="this.remove()" />
-            </div>
+          <article class="card honor tilt">
+            <div class="honor-media"><img src="assets/rockstar-640.jpg" alt="Rockstar Employee 2025" onerror="this.remove()" /></div>
             <h3>Rockstar Employee 2025</h3>
             <p>Recognized for outstanding contributions and team success.</p>
-            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7407804164354854912/" target="_blank" rel="noopener" class="btn-text">View post <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7407804164354854912/" target="_blank" rel="noopener" class="link mono">open post →</a>
           </article>
         </div>
       </section>
 
-      <!-- Experience -->
+      <!-- ============ EXPERIENCE ============ -->
       <section id="experience" class="section reveal">
-        <h2 class="section-title">Experience</h2>
-        <ol class="timeline">
+        <p class="kicker">// 06 · experience</p>
+        <h2>git log --career</h2>
+        <ol class="gitlog mono">
           <li>
-            <span class="when">Now</span>
-            <h3>CRM, AI Automation &amp; Software Solutions Specialist</h3>
-            <p class="where">The Plum Tree Group</p>
-            <p>Designing AI voice agents, GoHighLevel automations, CRM integrations and custom software that streamline how the business runs. Recognized with the Achiever Award and as a Rockstar Employee (2025).</p>
+            <span class="graph">*</span>
+            <div>
+              <p><span class="ref">(HEAD → now)</span> <strong>CRM, AI Automation &amp; Software Solutions Specialist</strong></p>
+              <p class="where">@ The Plum Tree Group</p>
+              <p class="msg">Designing AI voice agents, GoHighLevel automations, CRM integrations and custom software. Achiever Award and Rockstar Employee 2025.</p>
+            </div>
           </li>
           <li>
-            <span class="when">Earlier</span>
-            <h3>Data Analytics, Lead Generation &amp; Client Onboarding</h3>
-            <p>Scraped, cleaned and analyzed data, generated and qualified leads, and onboarded clients, which built the business-first lens I bring to every automation.</p>
+            <span class="graph">*</span>
+            <div>
+              <p><span class="ref ref-2">(earlier)</span> <strong>Data Analytics, Lead Generation &amp; Client Onboarding</strong></p>
+              <p class="msg">Scraped, cleaned and analyzed data, generated and qualified leads, and onboarded clients: the business-first lens behind every automation.</p>
+            </div>
           </li>
           <li>
-            <span class="when">Foundation</span>
-            <h3>Computer Science</h3>
-            <p>Background in Computer Science, including Harvard's CS50x, the base for my work in software, data and AI.</p>
+            <span class="graph">*</span>
+            <div>
+              <p><span class="ref ref-3">(init)</span> <strong>Computer Science</strong></p>
+              <p class="msg">Background in Computer Science, including Harvard's CS50x: the base for my work in software, data and AI.</p>
+            </div>
           </li>
         </ol>
       </section>
 
-      <!-- Toolkit -->
-      <section id="toolkit" class="section reveal">
-        <h2 class="section-title">Toolkit</h2>
-        <div class="toolkit">
-          <div class="card">
-            <div class="icon"><i class="fa-solid fa-robot"></i></div>
-            <h3>Automation &amp; CRM</h3>
-            <ul class="chips"><li>GoHighLevel</li><li>GHL workflows</li><li>n8n</li><li>Make.com</li><li>Zapier</li><li>Mailchimp</li><li>Google Apps Script</li></ul>
+      <!-- ============ TERMINAL ============ -->
+      <section id="terminal" class="section reveal">
+        <p class="kicker">// 07 · terminal</p>
+        <h2>Talk to my terminal</h2>
+        <div class="window terminal" id="term">
+          <div class="window-bar"><i></i><i></i><i></i><span>ali@portfolio: ~</span></div>
+          <div class="window-body mono" id="term-body">
+            <div id="term-out" class="term-out"></div>
+            <form id="term-form" class="term-line" autocomplete="off">
+              <label for="term-input" class="prompt">ali@portfolio:~$</label>
+              <input id="term-input" type="text" spellcheck="false" autocapitalize="off" aria-label="Terminal command" />
+            </form>
           </div>
-          <div class="card">
-            <div class="icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-            <h3>AI &amp; Development</h3>
-            <ul class="chips"><li>AI voice agents</li><li>Conversational AI</li><li>Vapi.ai</li><li>Claude Code</li><li>Vibe coding</li><li>Custom APIs</li><li>Webhooks</li></ul>
-          </div>
-          <div class="card">
-            <div class="icon"><i class="fa-solid fa-database"></i></div>
-            <h3>Data &amp; Analysis</h3>
-            <ul class="chips"><li>Python</li><li>Pandas</li><li>BeautifulSoup</li><li>Selenium</li><li>Jupyter</li><li>Power BI</li><li>Advanced Excel</li></ul>
-          </div>
+        </div>
+        <div class="chips mono" id="term-chips">
+          <button>help</button><button>whoami</button><button>skills</button><button>projects</button><button>contact</button><button>wave</button><button>sudo hire-ali</button>
         </div>
       </section>
 
-      <!-- Contact -->
-      <section id="contact" class="section reveal contact">
+      <!-- ============ CONTACT ============ -->
+      <section id="contact" class="section reveal">
+        <p class="kicker">// 08 · contact</p>
         <h2>Let's automate your success</h2>
-        <p>Have a process that should run itself? Reach out by email, WhatsApp or LinkedIn.</p>
-        <div class="cta center">
-          <a class="btn btn-primary" href="mailto:Mohammadaliqureshi2611@gmail.com"><i class="fa-regular fa-envelope"></i> Email me</a>
-          <a class="btn btn-secondary" href="https://wa.me/923102983030" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-          <a class="btn btn-secondary" href="https://www.linkedin.com/in/automatali/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <div class="contact-grid">
+          <div class="window">
+            <div class="window-bar"><i></i><i></i><i></i><span>contact.ts</span></div>
+<pre class="code"><code><span class="kw">await</span> <span class="var">ali</span>.<span class="fn">connect</span>({
+  <span class="prop">email</span>: <a class="str" href="mailto:Mohammadaliqureshi2611@gmail.com">"Mohammadaliqureshi2611@gmail.com"</a>,
+  <span class="prop">whatsapp</span>: <a class="str" href="https://wa.me/923102983030" target="_blank" rel="noopener">"+92 310 2983030"</a>,
+  <span class="prop">linkedin</span>: <a class="str" href="https://www.linkedin.com/in/automatali/" target="_blank" rel="noopener">"in/automatali"</a>,
+  <span class="prop">github</span>: <a class="str" href="https://github.com/MAliQ-pak" target="_blank" rel="noopener">"MAliQ-pak"</a>,
+});
+<span class="cm">// → Promise&lt;Partnership&gt;</span></code></pre>
+          </div>
+          <div class="contact-cta">
+            <p>Have a process that should run itself? Let's design the automation, integration or AI agent that gets it done.</p>
+            <div class="cta">
+              <a class="btn btn-primary" href="mailto:Mohammadaliqureshi2611@gmail.com">Email me</a>
+              <a class="btn btn-ghost" href="https://wa.me/923102983030" target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn btn-ghost" href="https://www.linkedin.com/in/automatali/" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+          </div>
         </div>
       </section>
     </div>
   </main>
 
-  <footer class="footer">
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/automatali/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://github.com/MAliQ-pak" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-      <a href="https://wa.me/923102983030" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-      <a href="mailto:Mohammadaliqureshi2611@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
-    </div>
-    <p>© <span id="year"></span> Muhammad Ali Qureshi · Built with Claude Code · Hosted on GitHub Pages</p>
+  <footer class="footer mono">
+    <p><span class="cm">/*</span> © <span id="year"></span> Muhammad Ali Qureshi · built with Three.js &amp; Claude Code · hosted on GitHub Pages <span class="cm">*/</span></p>
+    <p class="footer-links">
+      <a href="https://github.com/MAliQ-pak" target="_blank" rel="noopener">github</a> ·
+      <a href="https://www.linkedin.com/in/automatali/" target="_blank" rel="noopener">linkedin</a> ·
+      <a href="https://wa.me/923102983030" target="_blank" rel="noopener">whatsapp</a> ·
+      <a href="mailto:Mohammadaliqureshi2611@gmail.com">email</a>
+    </p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
+  <script type="module" src="scene.js"></script>
 </body>
 </html>

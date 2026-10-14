@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Avatar of Muhammad Ali Qureshi">
+  <defs>
+    <linearGradient id="avatar-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c3aed" />
+      <stop offset="1" stop-color="#06b6d4" />
+    </linearGradient>
+    <clipPath id="avatar-clip"><circle cx="100" cy="100" r="100" /></clipPath>
+  </defs>
+  <g clip-path="url(#avatar-clip)">
+    <rect width="200" height="200" fill="url(#avatar-bg)" />
+    <!-- body: navy blazer, white shirt -->
+    <path d="M24 200 C28 168 58 152 100 150 C142 152 172 168 176 200 Z" fill="#1e293b" />
+    <path d="M84 152 L100 182 L116 152 Z" fill="#e2e8f0" />
+    <path d="M84 152 L100 182 L92 200 L70 200 L75 158 Z" fill="#2b3a55" />
+    <path d="M116 152 L100 182 L108 200 L130 200 L125 158 Z" fill="#2b3a55" />
+    <!-- neck and ears -->
+    <rect x="87" y="120" width="26" height="36" rx="8" fill="#b07656" />
+    <ellipse cx="62" cy="96" rx="7" ry="10" fill="#b97d5c" />
+    <ellipse cx="138" cy="96" rx="7" ry="10" fill="#b97d5c" />
+    <!-- face -->
+    <ellipse cx="100" cy="92" rx="38" ry="45" fill="#c98d6b" />
+    <!-- beard and mouth -->
+    <path d="M62 88 C60 128 78 150 100 150 C122 150 140 128 138 88 C135 103 130 112 121 114 C113 110 106 109 100 110 C94 109 87 110 79 114 C70 112 65 103 62 88 Z" fill="#231a15" />
+    <path d="M90 125 Q100 133 110 125 Q100 128.5 90 125 Z" fill="#a8604c" />
+    <!-- hair -->
+    <path d="M60 92 C55 60 72 40 98 38 C126 36 147 56 140 92 C138 79 133 71 127 66 C118 72 104 70 92 63 C84 70 72 72 64 72 C62 78 61 84 60 92 Z" fill="#1b1512" />
+    <path d="M68 58 C66 42 78 32 90 38 C94 28 108 26 114 34 C124 30 136 40 134 56 C124 48 112 46 100 48 C88 46 76 50 68 58 Z" fill="#1b1512" />
+    <!-- eyebrows -->
+    <path d="M74 80 Q84 74 94 79" stroke="#1b1512" stroke-width="4.5" fill="none" stroke-linecap="round" />
+    <path d="M106 79 Q116 74 126 80" stroke="#1b1512" stroke-width="4.5" fill="none" stroke-linecap="round" />
+    <!-- eyes (pupils move and lids blink when inlined on the page) -->
+    <g class="avatar-eyes">
+      <ellipse cx="85" cy="92" rx="7.5" ry="5.5" fill="#ffffff" />
+      <ellipse cx="115" cy="92" rx="7.5" ry="5.5" fill="#ffffff" />
+      <g class="avatar-pupils">
+        <circle cx="85" cy="92.5" r="3.4" fill="#2a1a10" />
+        <circle cx="115" cy="92.5" r="3.4" fill="#2a1a10" />
+      </g>
+    </g>
+    <!-- nose -->
+    <path d="M100 94 Q95 106 99 109 Q102 110 104 108" stroke="#a46a4c" stroke-width="2" fill="none" stroke-linecap="round" />
+  </g>
+</svg>
